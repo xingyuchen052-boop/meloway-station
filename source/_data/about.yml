@@ -1,0 +1,94 @@
+- name: Meloway
+  subtitle: 租东楼听雨，见月于天青
+  avatarImg: /img/me.jpg
+  description: 一个把生活压缩成诗的梦想家
+  helloAbout: Meloway的始发站
+  aboutsiteTips:
+    tips: 关于本站
+    title1: 记录热爱
+    title2: 分享生活
+    word:
+      - 记录生活
+      - 分享热爱
+      - 追求梦想
+      - 探索未知
+  skillsTips:
+    tips: 兴趣
+    title: 解压密码
+  careers:
+    tips: 职业
+    title: 工作经历
+    list:
+      - desc: 在校大学生
+        color: "#4FC3F7"
+      - desc: 吟游诗人
+        color: "#66BB6A"
+      - desc: 传奇导演（早期）
+        color: "#FF6B6B"
+      - desc: 夜鹿厨/拿批
+        color: "#FFA726"
+  avatarSkills:
+    left:
+      - 设计
+      - 音乐
+    right:
+      - 写诗
+      - 摄影
+  selfInfo:
+    selfInfoTips1: 建立网站
+    selfInfoContentYear: 2026
+    selfInfoTips2: 发表文章
+    selfInfoContent2: 0
+    selfInfoTips3: 空闲时间
+    selfInfoContent3: creating
+  map:
+    title: 位置
+    background: https://picsum.photos/800/400?random=20
+    backgroundDark: https://picsum.photos/800/400?random=21
+    StrengthenTitle: 天津 中国
+  personalities:
+    author_name: Meloway
+    personality_type: ENFP-T
+    photo_url: /img/me.jpg
+    personality_img: https://picsum.photos/400/300?random=10
+    name_url: https://www.16personalities.com/
+    personality_type_color: "#4FC3F7"
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 七情六欲之下
+    maxim_bottom: 你是第十四行诗
+  buff:
+    buff_tips: 加成
+    buff_top: 适应生活
+    buff_bottom: 持续夏天
+  game:
+    game_tips: 游戏
+    game_title: CS
+    game_uid: 魔王C+
+    game_bg: https://picsum.photos/800/400?random=11
+  comic:
+    comic_tips: 追番
+    comic_title: 喜欢的番剧
+    comic_list:
+      - name: 进击的巨人
+        href: https://bilibili.com
+        cover: https://picsum.photos/200/300?random=13
+      - name: 葬送的芙莉莲
+        href: https://bilibili.com
+        cover: https://picsum.photos/200/300?random=14
+      - name: 辉夜大小姐
+        href: https://bilibili.com
+        cover: https://picsum.photos/200/300?random=15
+      - name: 败犬女主
+        href: https://bilibili.com
+        cover: https://picsum.photos/200/300?random=16
+  music:
+    music_tips: 音乐
+    music_title: ヨルシカ
+    music_link: /music/
+    music_bg: https://picsum.photos/800/400?random=14
+  like:
+    like_tips: 爱好
+    like_title: 技术探索
+    like_bottom: vibecoding学习中！
+    like_bg: https://picsum.photos/800/400?random=15

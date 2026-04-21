@@ -1,0 +1,16 @@
+- name: 说说
+  title: 说说
+  subTitle: 记录生活点滴
+  tips: 记录生活的每一刻
+  limit: 10
+  buttonText: 查看更多
+  buttonLink: /
+  essay_list:
+    - content: "这是第一条说说内容，记录生活中的美好瞬间 🌟"
+      date: 2026-04-19
+    - content: "今天天气真不错，适合出门走走！"
+      date: 2026-04-18
+    - content: "学习新技术中，感觉很有收获 💪"
+      date: 2026-04-17
+    - content: "新买了一本书，期待阅读体验 📚"
+      date: 2026-04-16

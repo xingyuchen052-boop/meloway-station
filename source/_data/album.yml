@@ -1,0 +1,12 @@
+- class_name: 风景
+  description: 美丽的自然风景
+  cover: https://picsum.photos/800/600?random=1
+  path_name: /album/scenery/
+- class_name: 生活
+  description: 日常生活记录
+  cover: https://picsum.photos/800/600?random=2
+  path_name: /album/life/
+- class_name: 旅行
+  description: 旅途中的美好瞬间
+  cover: https://picsum.photos/800/600?random=3
+  path_name: /album/travel/

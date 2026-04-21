@@ -1,0 +1,25 @@
+- creativity_list:
+  - name: 设计
+    icon: https://picsum.photos/32/32?random=30
+    color: "#4FC3F7"
+  - name: 音乐
+    icon: https://picsum.photos/32/32?random=31
+    color: "#66BB6A"
+  - name: 写诗
+    icon: https://picsum.photos/32/32?random=32
+    color: "#FF6B6B"
+  - name: 摄影
+    icon: https://picsum.photos/32/32?random=33
+    color: "#FFA726"
+  - name: 视频剪辑
+    icon: https://picsum.photos/32/32?random=34
+    color: "#9575CD"
+  - name: 编程
+    icon: https://picsum.photos/32/32?random=35
+    color: "#4DB6AC"
+  - name: 追剧
+    icon: https://picsum.photos/32/32?random=36
+    color: "#FF8A65"
+  - name: 听音乐
+    icon: https://picsum.photos/32/32?random=37
+    color: "#A1887F"

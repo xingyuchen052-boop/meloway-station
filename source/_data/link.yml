@@ -1,0 +1,16 @@
+- class_name: 优秀博主
+  link_list:
+    - name: Meloway的始发站
+      link: /
+      avatar: /img/me.jpg
+      descr: 记录生活，分享技术
+    - name: 安知鱼
+      link: https://anzhiyu.cn/
+      avatar: https://image.anzhiyu.cn/avatar.png
+      descr: 一个安静的博客
+- class_name: 工具网站
+  link_list:
+    - name: 图床
+      link: https://image.anheyu.com/
+      avatar: https://image.anheyu.com/favicon.ico
+      descr: 免费图床
