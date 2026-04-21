@@ -1,12 +1,13 @@
-name: Deploy Hexo to Pages
+name: Deploy GitHub Pages
 
 on:
   push:
     branches:
-      - main  # 确认你的主分支叫 main，如果是 master 请修改
+      - main
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -16,29 +17,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: 'recursive' # 关键：告诉 GitHub 去拉取你的安知鱼主题
-          fetch-depth: 0
+
+      - name: Set up theme
+        run: |
+          # 清理旧的主题目录
+          rm -rf themes/anzhiyu
+          # 克隆 anzhiyu 主题（使用官方仓库）
+          git clone https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
+          # 更新头像路径
+          sed -i 's|img: https://bu.dusays.com/2023/04/27/64496e511b09c.jpg|img: /img/me.jpg|g' themes/anzhiyu/_config.yml
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Build Hexo
-        run: |
-          npx hexo clean
-          npx hexo generate
+      - name: Build
+        run: npm run build
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./public
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
