@@ -11,16 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          submodules: true
-          fetch-depth: 0
+        uses: actions/checkout@v4
+
+      - name: Initialize submodules
+        run: |
+          git submodule sync
+          git submodule update --init --recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: '20'
           cache: 'npm'
+
+      - name: Clean up residual files
+        run: rm -rf themes/anzhiyu
 
       - name: Install dependencies
         run: npm install
