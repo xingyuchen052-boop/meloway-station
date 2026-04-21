@@ -25,7 +25,7 @@ jobs:
           # 克隆 anzhiyu 主题（使用官方仓库）
           git clone https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
           # 更新头像路径
-          sed -i 's|img: https://bu.dusays.com/2023/04/27/64496e511b09c.jpg|img: /img/me.jpg|g' themes/anzhiyu/_config.yml
+          sed -i 's|img: https://bu.dusays.com/2023/04/27/64496e511b09c.jpg|img: /meloway-station/img/me.jpg|g' themes/anzhiyu/_config.yml
           # 更新随机文章脚本路径
           sed -i 's|script(async src="/anzhiyu/random.js")|script(async src="/meloway-station/js/random-post.js")|g' themes/anzhiyu/layout/includes/additional-js.pug
           # 更新 Meting API 配置
