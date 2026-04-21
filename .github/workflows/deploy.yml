@@ -26,6 +26,13 @@ jobs:
           git clone https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
           # 更新头像路径
           sed -i 's|img: https://bu.dusays.com/2023/04/27/64496e511b09c.jpg|img: /img/me.jpg|g' themes/anzhiyu/_config.yml
+          # 更新随机文章脚本路径
+          sed -i 's|script(async src="/anzhiyu/random.js")|script(async src="/meloway-station/js/random-post.js")|g' themes/anzhiyu/layout/includes/additional-js.pug
+          # 更新 Meting API 配置
+          echo "  # Meting API 配置
+  meting_api: https://meting-api-cn.vercel.app/api" >> themes/anzhiyu/_config.yml
+          # 更新第三方 CDN 提供者
+          sed -i 's|third_party_provider: cbd|third_party_provider: jsdelivr|g' themes/anzhiyu/_config.yml
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
