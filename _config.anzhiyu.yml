@@ -126,7 +126,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /meloway-station/img/me.jpg
+  img: /img/me.jpg
   effect: false
 
 # Disable all banner image
