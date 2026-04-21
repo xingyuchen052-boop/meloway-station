@@ -8,20 +8,23 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Clean old theme directory
+        run: rm -rf themes/anzhiyu
+
+      - name: Initialize submodules
+        run: |
+          git submodule sync
+          git submodule update --init --recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -40,12 +43,9 @@ jobs:
       - name: List build output
         run: ls -la public/
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: ./public
-
       - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
